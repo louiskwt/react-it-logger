@@ -2,8 +2,12 @@ import {
 	GET_LOGS,
 	ADD_LOG,
 	DELETE_LOG,
+	UPDATE_LOG,
 	SET_LOADING,
-	LOGS_ERROR
+	LOGS_ERROR,
+	SET_CURRENT,
+	CLEAR_CURRENT,
+	SEARCH_LOGS
 } from '../actions/types';
 import store from '../store';
 
@@ -28,6 +32,18 @@ export default (state = initialState, action) => {
 				logs: [...state.logs, action.payload],
 				loading: false
 			};
+		case UPDATE_LOG:
+			return {
+				...state,
+				logs: state.logs.map((log) =>
+					log.id === action.payload.id ? action.payload : log
+				)
+			};
+		case SEARCH_LOGS:
+			return {
+				...state,
+				logs: action.payload
+			};
 		case DELETE_LOG:
 			return {
 				...state,
@@ -38,6 +54,16 @@ export default (state = initialState, action) => {
 			return {
 				...state,
 				loading: true
+			};
+		case SET_CURRENT:
+			return {
+				...state,
+				current: action.payload
+			};
+		case CLEAR_CURRENT:
+			return {
+				...state,
+				current: null
 			};
 		case LOGS_ERROR:
 			console.error(action.payload);

@@ -8,11 +8,11 @@
       "id": 1
     },
     {
-      "message": "Fix the wifi ",
+      "id": 3,
+      "message": "Fixed the wifi in room 2",
       "attention": false,
-      "tech": "Chris Wong",
-      "date": "2021-05-07T07:22:28.667Z",
-      "id": 3
+      "tech": "Ikura Rira",
+      "date": "2021-05-07T08:10:39.865Z"
     }
   ],
   "techs": [
