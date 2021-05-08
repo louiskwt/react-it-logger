@@ -1,18 +1,11 @@
 {
   "Logs": [
     {
-      "message": "Change Network Card in Server 1",
+      "message": "Fix Stuff",
       "attention": true,
       "tech": "Sam Smith",
-      "date": "2021-05-07T07:16:44.334Z",
+      "date": "2021-05-08T03:04:35.338Z",
       "id": 1
-    },
-    {
-      "id": 3,
-      "message": "Fixed the wifi in room 2",
-      "attention": false,
-      "tech": "Ikura Rira",
-      "date": "2021-05-07T08:10:39.865Z"
     }
   ],
   "techs": [
